@@ -11,13 +11,16 @@ Table of contents:
 	- Changelog
 
 ## Installation
+Codes can be seemlessly excuted in the docker container below.
+Please pull the image of tensorflow/tensorflow:2.6.0-gpu-jupyter and run a container from the image.
 ```
 docker pull tensorflow/tensorflow:2.6.0-gpu-jupyter
 ```
 ## Overview
+Despite the emergence of mobile health and the success of deep learning (DL), deploying production-ready DL models to resource-limited devices remains challenging. Especially, during inference time, the speed of DL models becomes relevant. We aimed to accelerate inference time for Gram-stained analysis, which is a tedious and manual task involving microorganisms detection on whole slide images. Three DL models were optimized in three steps: transfer learning, pruning and quantization and then evaluated on two Android smartphones. Most convolutional layers (≥80%) had to be retrained for adaptation to the Gram-stained classification task. The combination of pruning and quantization demonstrated its utility to reduce the model size and inference time without compromising model quality. Pruning mainly contributed to model size reduction by 15x, while quantization reduced inference time by 3x and decreased model size by 4x. The combination of two reduced the baseline model by an overall factor of 46x. Optimized models were smaller than 6 MB and were able to process one image in <0.6 seconds on Galaxy S10. Our findings demonstrate that methods for model compression are highly relevant for the successful deployment of DL solutions to resource-limited devices.
 
 ## CNN models
-Three pretrained models were utilized in order to avoid model selection bias. They are namely Inception [21], ResNet [22], and MobileNet [23]. Inception was chosen because it is the most prevalent model utilized in the medical domain according to Morid et al. [24] and Kim et al [19]. Furthermore, ResNet is the most widely used backbone model for other tasks such as object detection and segmentation [25]. Finally, MobileNet was selected because it was explicitly designed to be deployed to resource constrained-devices [23]. 
+Three pretrained models were utilized in order to avoid model selection bias. They are namely Inception, ResNet, and MobileNet. Inception was chosen because it is the most prevalent model utilized in the medical domain. ResNet is the most widely used backbone model for other tasks such as object detection and segmentation. Finally, MobileNet was selected because it was explicitly designed to be deployed to resource constrained-devices. 
 
 ## Data
 The approval of the Data Protection office is currently in the works. As soon as we get approval, we will add data to the GitHub repository and update the readme file accordingly. Meantime, we will provide the link to the DIBaS database which is a publicly accessible gram stain image dataset: https://github.com/gallardorafael/DIBaS-Dataset. 
@@ -52,9 +55,4 @@ adb shell am start -S -n org.tensorflow.lite.benchmark/.BenchmarkModelActivity -
 ```
 
 ## Bibtex
-19.	Kim HE, Cosa-Linan A, Santhanam N, Jannesari M, Maros ME, Ganslandt T. Transfer learning for medical image classification: a literature review. BMC Medical Imaging 2022 Apr 13;22(1):69. [doi: 10.1186/s12880-022-00793-7]21.	Szegedy C, Liu W, Jia Y, Sermanet P, Reed S, Anguelov D, Erhan D, Vanhoucke V, Rabinovich A. Going deeper with convolutions. Proceedings of the IEEE conference on computer vision and pattern recognition 2015. p. 1–9.
-22.	He K, Zhang X, Ren S, Sun J. Deep residual learning for image recognition. Proceedings of the IEEE conference on computer vision and pattern recognition 2016. p. 770–778.
-23.	Howard AG, Zhu M, Chen B, Kalenichenko D, Wang W, Weyand T, Andreetto M, Adam H. Mobilenets: Efficient convolutional neural networks for mobile vision applications. arXiv preprint arXiv:170404861 2017;
-24.	Morid MA, Borjali A, Del Fiol G. A scoping review of transfer learning research on medical image analysis using ImageNet. Computers in biology and medicine. 2021 Jan 1;128:104115.
-25.	Lee Y, Hwang JW, Lee S, Bae Y, Park J. An energy and GPU-computation efficient backbone network for real-time object detection. InProceedings of the IEEE/CVF conference on computer vision and pattern recognition workshops 2019 (pp. 0-0).
 
