@@ -55,4 +55,4 @@ adb shell am start -S -n org.tensorflow.lite.benchmark/.BenchmarkModelActivity -
 ```
 
 ## Bibtex
-
+Kim HE, Maros ME, Siegel F, Ganslandt T. Rapid Convolutional Neural Networks for Gram-Stained Image Classification at Inference Time on Mobile Devices: Empirical Study from Transfer Learning to Optimization. Biomedicines. 2022; 10(11):2808. https://doi.org/10.3390/biomedicines10112808
