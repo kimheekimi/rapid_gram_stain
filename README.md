@@ -23,7 +23,7 @@ Despite the emergence of mobile health and the success of deep learning (DL), de
 Three pretrained models were utilized in order to avoid model selection bias. They are namely Inception, ResNet, and MobileNet. Inception was chosen because it is the most prevalent model utilized in the medical domain. ResNet is the most widely used backbone model for other tasks such as object detection and segmentation. Finally, MobileNet was selected because it was explicitly designed to be deployed to resource constrained-devices. 
 
 ## Data
-The approval of the Data Protection office is currently in the works. As soon as we get approval, we will add data to the GitHub repository and update the readme file accordingly. Meantime, we will provide the link to the DIBaS database which is a publicly accessible gram stain image dataset: https://github.com/gallardorafael/DIBaS-Dataset. 
+The Ethics committee of Medical Faculty Mannheim, Heidelberg University allowed us to make data publicly available. We would like to thank the Institute for Clinical Chemistry and Institute of Medical Microbiology and Hygiene, Medical Faculty Mannheim of Heidelberg University, for providing the data. https://heibox.uni-heidelberg.de/d/6b672e3ff50a468191b9/
 
 ## Benchmark on mobile devices
 - Reference: https://www.androidrecovery.com/blog/install-use-adb-windows.html
